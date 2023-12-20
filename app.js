@@ -1,7 +1,8 @@
 let watchId;
-
+let tracking=false;
 function startTracking() {
     if ('geolocation' in navigator) {
+        document.getElementById('location').innerHTML="Tracking..."
         watchId = navigator.geolocation.watchPosition(updateLocation, handleLocationError, { enableHighAccuracy: true });
     } else {
         alert('Geolocation is not supported by your browser');
