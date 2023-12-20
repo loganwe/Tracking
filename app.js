@@ -21,7 +21,7 @@ function updateLocation(position) {
     const longitude = position.coords.longitude;
 
     document.getElementById('location').innerHTML = `Latitude: ${latitude}<br>Longitude: ${longitude}`;
-
+    document.getElementById("vl").href="https://www.latlong.net/c/?lat="+ latitude+"&long="+ longitude
     // In a real-world scenario, you would send this data to a backend server for storage.
     // You might use AJAX, Fetch API, or another method to send the data to the server.
 }
